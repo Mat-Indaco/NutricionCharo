@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto | Nutrición Salud</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Nutrición Salud</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="producto.html" class="active">Producto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="product" style="margin-top:120px;">
+  <h2>Plan Nutricional Integral</h2>
+  <p class="price">$XX.XXX</p>
+  <button class="btn" id="openModal">Solicitar Plan</button>
+  <div id="modalCompra" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <h3>Solicitar Plan</h3>
+
+    <form id="formProducto">
+      <input type="text"  name="nombre" placeholder="Tu nombre"required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <button type="submit" class="btn" >Recibir información</button>
+
+    </form>
+
+  </div>
+
+</div>
+</section>
+
+<section class="benefits">
+  <h2>¿Qué incluye el plan?</h2>
+  <div class="benefits-grid">
+    <div>✔ Plan 100% personalizado</div>
+    <div>✔ Seguimiento semanal</div>
+    <div>✔ Guía práctica de alimentos</div>
+    <div>✔ Soporte por WhatsApp</div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Nutrición Salud Argentina</p>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
