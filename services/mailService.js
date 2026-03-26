@@ -13,7 +13,13 @@ async function sendEmail({ to, subject, html }) {
     from: `"Nutrición Salud" <${process.env.EMAIL_USER}>`,
     to,
     subject,
-    html
+    html,attachments: [
+    {
+      filename: "logo.png",
+      path: "./services/images/logo.png",
+      cid: "logoFirma"
+    }
+  ]
   });
 }
 

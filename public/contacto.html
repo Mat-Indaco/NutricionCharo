@@ -6,37 +6,179 @@
 <title>Contacto | Nutrición Salud</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="sobre-miStyle.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
 <nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">Nutrición Salud</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="producto.html">Producto</a></li>
-      <li><a href="contacto.html" class="active">Contacto</a></li>
-    </ul>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="./images/logo1.png" alt="Nutricionista">
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="sobre-mi.html" >SOBRE MI</a></li>
+          <li><a href="producto.html"  >TIENDA</a></li>
+          <li><a href="contacto.html" class="active">CONTACTO</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  </nav>
+
+<section class="sobre-mi">
+<div class="sobre-container">
+
+<!-- imagen izquierda -->
+
+    <div class="sobre-img">
+          <div class="foto-oval">
+            <img src="images/recibida.png">
+          </div>
+    </div>
+
+
+<!-- texto derecha -->
+
+      <div class="sobre-text">
+      
+      <div class="iconos">
+        <img src="images/community-icon.png">
+        <img src="images/calendar-icon.png">
+        <img src="images/icono-manzana.png">
+      </div>
+
+      <h2>Conocé a mi equipo</h2>
+
+      <p>
+      Si estás buscando un seguimiento personalizado, mi equipo nutricional está capacitado para eso. Actualmente somos dos profesionales dedicadas al área de la nutrición, con el mismo enfoque y calidad de atención.
+      </p>
+      <div class="team">
+        <div class="team-member">
+          <img src="images/team-Taciana.png" alt="Lic. Taciana Brunello">
+          <p class="name">Lic. Taciana</p>
+          <p class="name"> Brunello</p>
+        </div>
+      <div class="team-member">
+        <img src="images/team-charo.png" alt="Lic. Charo Olariaga">
+        <p class="name">Lic. Charo </p>
+        <p class="name">Olariaga</p>
+      </div>
+    </div>
+      <a href="#" class="about-link"  data-modal="modalTurno">Reservar Turno →</a>
+    </div>
   </div>
-</nav>
+  <div id="modalTurno" class="modal">
+  <div class="modal-content">
+    
+    <span class="close">&times;</span>
+    
+    <h2>Gracias por elegirnos para empezar tu proceso de cambio de hábitos!</h2>
 
-<section style="margin-top:120px; padding:60px 20px; text-align:center;">
-  <h2>Contactame</h2>
-  <p>Completá tus datos y te responderé a la brevedad</p>
+    <p>
+   Completa los datos para que te enviemos la disponibilidad de turnos.
+   </p>
 
-  <form id="formCompleto" style="max-width:400px; margin:40px auto;">
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
-    <input type="email"name="email"  placeholder="Email" required>
-    <input type="tel"  name="telefono" placeholder="Teléfono" required>
-    <button type="submit" class="btn">Enviar</button>
-  </form>
+    <form id="formTurno">
+      <input type="text" name="nombre" placeholder="Tu nombre..." required>
+      <input type="email" name="email" placeholder="Tu email..." required>
+      <button type="submit">Reservar turno</button>
+    </form>
+
+  </div>
+</div>
+
+
+
 </section>
 
-<footer>
-  <p>© 2026 Nutrición Salud Argentina</p>
+<section class="sobre-mi reverse">
+<div class="sobre-container">
+
+<!-- imagen izquierda -->
+
+    <div class="sobre-img">
+          <div class="foto-oval">
+            <img src="images/contacto-charo.png">
+          </div>
+    </div>
+
+
+<!-- texto derecha -->
+
+      <div class="sobre-text">
+      
+      <div class="iconos">
+        <img src="images/foco-icon.png">
+        <img src="images/camara-icon.png">
+        <img src="images/reciclar-icon.png">
+      </div>
+
+      <h2>Conocé a mi equipo</h2>
+
+      <p>
+      Si estás buscando un seguimiento personalizado, mi equipo nutricional está capacitado para eso. Actualmente somos dos profesionales dedicadas al área de la nutrición, con el mismo enfoque y calidad de atención.
+      </p>
+      <a href="#" class="about-link" data-modal="modalPropuesta">Enviar Propuesta →</a>
+      </div>
+    </div>
+    
+    <div id="modalPropuesta" class="modal">
+      <div class="modal-content">
+        
+        <span class="close">&times;</span>
+      <h2>Trabajá conmigo!</h2>
+    
+      <p>
+        Creo contenido para marcas que vayan con mi estilo y enfoque.       </p>
+    
+      <p>
+        Si te interesa que trabajemos juntos para hacer llegar tu marca más lejos, no dudes en consultarme!      </p>
+       <form id="formCompleto">
+      <input type="text" name="nombre" placeholder="Ingresa tu nombre...">
+      <input type="email" name="email" placeholder="Ingresá tu email...">
+      <textarea type="text" name="mensaje" placeholder="Mensaje..."></textarea>
+      <input type="hidden" name="producto"  id="productoInput">
+      <input type="hidden" name="precio" id="precioInput">
+      <button type="submit" class="btn" >Recibir información</button>
+          
+      </form>
+    </div>
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-logo">
+<img src="images/logo.png" alt="Charo Nutrición">
+</div>
+<div class="footer-right">
+
+<div class="footer-social">
+<a href="#"><img src="images/ig.png"></a>
+<a href="#"><img src="images/fb.png"></a>
+<a href="#"><img src="images/mail.png"></a>
+</div>
+
+<p class="footer-copy">
+© 2025 Charo Olariaga — Nutrición
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

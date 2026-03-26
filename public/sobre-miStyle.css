@@ -1,0 +1,317 @@
+:root {
+  --color-rosaSuave: #F9E4E4;
+  --color-rosaDark: #BA6D80;
+  --color-rosaDark1:#CC9595;
+  --color-fondo: #F5F5E8;
+  --color-verdeSuave: #E9FFEA;
+  --color-verdeDark: #0A3720;
+  --color-verdeSlightDark: #334E40;
+
+}
+
+.iconos{
+display:flex;
+gap:12px;
+margin-bottom:15px;
+}
+
+.iconos img{
+width:50px;
+height:auto;
+}
+
+
+.historia{
+     background: var(--color-fondo);
+}
+
+.sobre-mi{
+  padding: 30px;
+  background: var(--color-fondo);
+}
+
+
+.foto-oval{
+
+  border-radius: 80% 80% 80% 0
+  /
+  50% 50% 60% 0;;
+  overflow: hidden;
+  z-index: 1;
+   width:420px;
+  height:700px;
+background-color: var(--color-fondo);
+}
+
+.foto-oval img{width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  z-index: 1;}
+
+
+.logo-wrapper{
+position:absolute;
+bottom:-10px;
+left:-60px;
+padding: 5px;
+width:190px;
+height:170px;
+
+background:var(--color-fondo);
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.logo-deco{
+width:150px;
+height:auto;
+}
+
+
+.flecha-deco{
+position:absolute;
+
+left:13%;
+bottom:-280px;
+
+width:18vw;
+max-width:260px;
+
+transform:translateX(-70%);
+
+pointer-events:none;
+
+opacity:0;
+
+
+animation:
+flechaAppear 1s ease forwards,
+flechaFloat 4s ease-in-out infinite 1s;;
+}
+
+@keyframes flechaAppear{
+
+from{
+opacity:0;
+transform:translate(-120%,40px);
+}
+
+to{
+opacity:1;
+transform:translate(-120%,0);
+}
+
+}
+
+.flecha-deco{
+animation:
+flechaAppear 1s ease forwards,
+flechaFloat 4s ease-in-out infinite 1s;
+}
+
+@keyframes flechaFloat{
+
+0%{
+transform:translate(-120%,0);
+}
+
+50%{
+transform:translate(-120%,12px);
+}
+
+100%{
+transform:translate(-120%,0);
+}
+
+
+}
+.sobre-img{
+  position:relative;
+}
+
+
+.sobre-container{
+display:flex;
+margin:0;
+align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+max-width:1200px;
+margin:auto;
+}
+
+.reverse .sobre-container{
+  flex-direction: row-reverse;
+}
+
+.sobre-text{
+  position:relative;
+  font-family: 'Quicksand';
+  margin:0;
+  color: var(--color-verdeDark);
+}
+.sobre-text h2{
+    margin:0;
+  font-size: 48px;
+}
+.sobre-text p{
+  font-size: 20px;
+}
+.sobre-text p:last-of-type{
+position:relative;
+}
+
+
+
+.timeline-img {
+grid-template-columns:1fr;
+display:flex;
+max-width: 500px;
+justify-content:center;
+}
+
+.timeline-img img{
+  width:100%;
+  height:100%;
+  max-width:500px;
+}
+
+.historia-container{
+display:grid;
+grid-template-columns:1fr 380px;
+gap:120px;
+align-items:center;
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.historia-text{
+  color: var(--color-verdeDark);
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.2;
+}
+.historia-text h2{
+    margin:0;
+  font-size: 48px;
+}
+.historia-text p{
+  font-size: 20px;
+}
+.historia-phone img{
+width:320px;
+border-radius:30px;
+
+}
+@media (max-width:768px){
+
+.iconos{
+display:flex;
+justify-content: center;
+gap:10px;
+margin-top:-80px;
+}
+
+.sobre-text h2{
+  font-size: 28px;
+}
+.sobre-text p{
+  font-size: 18px;
+  line-height: 1.2;
+}
+.sobre-img{
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+z-index: 1;
+
+}
+.foto-oval{
+  border-radius: 80% 80% 80% 0
+  /
+  50% 50% 60% 0;
+  max-width:140px;
+  max-height:230px ;
+   transform:none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.foto-oval img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  z-index: 1;
+}
+
+.logo-wrapper{
+position:absolute;
+padding: 5px;
+max-width:80px;
+max-height:80px;
+  transform:none;
+background:var(--color-fondo);
+border-radius:50%;
+z-index: 2;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.logo-deco{
+width:90%;
+height:auto;
+z-index: 2;
+}
+  
+
+.sobre-container{
+
+display:grid;
+gap:120px;
+max-width:1200px;
+margin:auto;
+padding-top: 10%;
+grid-template-columns:1fr;
+text-align:center;
+justify-items: center;
+}
+
+
+
+.historia-container{
+  padding: 30px;
+  display:flex;
+  flex-direction:column;
+}
+
+.historia-phone{
+  order:-1;
+}
+
+.historia-text h2{
+  font-size: 28px;
+}
+
+.historia-text p{
+  font-size: 18px;
+}
+
+.historia-phone img{
+  width:250px;
+}
+
+
+.flecha-deco{
+display:none;
+}
+
+}
