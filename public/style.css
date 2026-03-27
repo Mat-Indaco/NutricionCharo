@@ -347,7 +347,7 @@ display: flex;
 
 
 .parallax{
-  height:200px;
+  height:100px;
   background:url('./images/pexels-marcus-aurelius-9788610\ 3.png') center/cover no-repeat;
   background-attachment:fixed;
 }
@@ -793,6 +793,131 @@ transition:.3s;
 
 .modal.active {
   display: flex;
+}
+
+
+@media (min-width: 2100px) {
+
+  .intro-wrapper {
+    max-width: 1900px; /* antes 240px */
+  gap: 10px;
+  }
+
+  .circle-image {
+  width: 500px;
+  height: 500px;
+  left: -10%;
+  }
+
+  .intro-content{
+    max-width: 590px;
+  }
+
+  .intro-content h2 {
+  font-size: clamp(22px, 3vw, 36px);
+  }
+
+  .intro-content-right h1 {
+    font-size: clamp(24px, 2.5vw, 33px);
+  }
+
+  .intro-content-right {
+  align-self: center; /* en vez de end */
+}
+}
+
+@media (max-width: 1450px) {
+
+  .intro-wrapper {
+    max-width: 1100px;
+  padding-left: 240px; /* antes 240px */
+  gap: 10px;
+  }
+
+  .circle-image {
+  width: 500px;
+  height: 500px;
+  left: -19%;
+  }
+
+  .intro-content{
+    max-width: 590px;
+  }
+
+  .intro-content h2 {
+  font-size: clamp(22px, 3vw, 36px);
+  }
+
+  .intro-content-right h1 {
+    font-size: clamp(24px, 2.5vw, 33px);
+  }
+
+  .intro-content-right {
+  align-self: center; /* en vez de end */
+}
+}
+
+
+@media (max-width: 1200px) {
+
+  .intro-wrapper {
+  max-width: 700px;
+  padding-left: 150px; /* antes 240px */
+  gap: 40px;
+  }
+
+  .intro-content{
+    max-width: 330px;
+  }
+
+  .circle-image {
+  width: 500px;
+  height: 500px;
+  left: -20%;
+  }
+
+  .intro-content h2 {
+  font-size: clamp(28px, 3vw, 44px);
+  }
+
+  .intro-content-right h1 {
+    font-size: clamp(24px, 2.5vw, 40px);
+  }
+
+  .intro-content-right {
+  align-self: end; /* en vez de end */
+}
+}
+
+@media (max-width: 1025px) {
+
+  .intro-wrapper {
+  max-width: 700px;
+  padding-left: 190px; /* antes 240px */
+  gap: 40px;
+  }
+
+  .intro-content{
+    max-width: 330px;
+  }
+
+  .circle-image {
+  width: 500px;
+  height: 500px;
+  left: -29%;
+  }
+
+  .intro-content h2 {
+  font-size: clamp(28px, 3vw, 44px);
+  }
+
+  .intro-content-right h1 {
+    font-size: clamp(24px, 2.5vw, 40px);
+  }
+
+  .intro-content-right {
+  align-self: end; /* en vez de end */
+}
 }
 
 @media (max-width:768px){
