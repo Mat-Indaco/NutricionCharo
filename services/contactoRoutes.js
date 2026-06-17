@@ -17,7 +17,7 @@ router.post("/contacto", async (req, res) => {
     await Promise.all([
 
       sendEmail({
-        to: process.env.EMAIL_USER,
+        to: process.env.EMAIL_ADMIN,
         subject: "Nuevo contacto web",
         html: templates.contactoAdmin({ nombre, email, mensaje })
       }),
@@ -54,7 +54,7 @@ router.post("/turno", async (req, res) => {
     await Promise.all([
 
       sendEmail({
-        to: process.env.EMAIL_USER,
+        to: process.env.EMAIL_ADMIN,
         subject: "Nueva Reserva Turno",
         html: templates.turnoAdmin({ nombre, email })
       }),
@@ -90,7 +90,7 @@ router.post("/producto", async (req, res) => {
     await Promise.all([
 
       sendEmail({
-        to: process.env.EMAIL_USER,
+        to: process.env.EMAIL_ADMIN,
         subject: "Interesado en recetario",
         html: templates.productoAdmin({ nombre, email, producto, precio })
       }),

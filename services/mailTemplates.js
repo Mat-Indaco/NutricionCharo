@@ -4,7 +4,7 @@ function turnoAdmin({ nombre, email }) {
     <p><b>Nombre:</b> ${nombre}</p>
     <p><b>Email:</b> ${email}</p>
     <td>
-    <img src="cid:logoFirma" width="120"/>
+    <img src="${process.env.LOGO_URL}" width="120"/>
     </td>
   `;
 }
@@ -15,7 +15,7 @@ function turnoCliente({ nombre }) {
     <p>Gracias por interesarte en trabajar con Charo Nutrición ✨.</p>
     <p>A la brevedad me contactaré con ustedes.</p>
     <td>
-    <img src="cid:logoFirma" width="120"/>
+    <img src="${process.env.LOGO_URL}" width="120"/>
     </td>
   `;
 }
@@ -29,7 +29,7 @@ function contactoAdmin({ nombre, email,mensaje }) {
     <p><b>Email:</b> ${email}</p>
     <p><b>mensaje:</b> ${mensaje}</p>
     <td>
-    <img src="cid:logoFirma" width="120"/>
+    <img src="${process.env.LOGO_URL}" width="120"/>
     </td>
   `;
 }
@@ -40,7 +40,7 @@ function contactoCliente({ nombre }) {
     <p>Gracias por interesarte en trabajar con Charo Nutrición ✨.</p>
     <p>A la brevedad me contactaré con ustedes.</p>
     <td>
-    <img src="cid:logoFirma" width="120"/>
+    <img src="${process.env.LOGO_URL}" width="120"/>
     </td>
   `;
 }
@@ -52,7 +52,7 @@ function productoAdmin({ nombre, email, telefono }) {
     <p><b>Email:</b> ${email}</p>
     <p><b>Teléfono:</b> ${telefono}</p>
     <td>
-    <img src="cid:logoFirma" width="120"/>
+    <img src="${process.env.LOGO_URL}" width="120"/>
     </td>
   `;
 }
@@ -111,7 +111,7 @@ Gracias! ✨
 <tr>
 
 <td>
-<img src="cid:logoFirma" width="90"/>
+<img src="${process.env.LOGO_URL}" width="90"/>
 </td>
 
 <td style="padding-left:12px; font-size:14px; line-height:1.4;">

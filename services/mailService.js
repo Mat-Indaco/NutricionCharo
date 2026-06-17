@@ -1,26 +1,16 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendEmail({ to, subject, html }) {
-  return transporter.sendMail({
-    from: `"Nutrición Salud" <${process.env.EMAIL_USER}>`,
+  const { error } = await resend.emails.send({
+    from: process.env.EMAIL_FROM,
     to,
     subject,
-    html,attachments: [
-    {
-      filename: "logo.png",
-      path: "./services/images/logo.png",
-      cid: "logoFirma"
-    }
-  ]
+    html
   });
+
+  if (error) throw error;
 }
 
 module.exports = sendEmail;
