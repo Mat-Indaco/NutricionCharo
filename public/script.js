@@ -156,7 +156,7 @@ function initProductoForm(){
 
     try{
 
-      const res = await fetch("/api/producto",{
+      const res = await fetch("/.netlify/functions/producto",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -200,7 +200,7 @@ function initTurnoForm(){
       email: form.email.value,
     };
 
-    const res = await fetch("/api/turno",{
+    const res = await fetch("/.netlify/functions/turno",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -237,7 +237,7 @@ function initContactoForm(){
       mensaje: form.mensaje.value
     };
 
-    const res = await fetch("/api/contacto",{
+    const res = await fetch("/.netlify/functions/contacto",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
