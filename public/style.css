@@ -255,35 +255,40 @@ display: flex;
   min-height:400px;
   position:relative;
   display:grid;
-  
   align-items:center;
-  gap:80px;
+  box-sizing:border-box;
+  /* el padding-left deja espacio para la mitad visible del círculo; todo es
+     fluido para no cortar el texto en ninguna resolución */
+  padding: clamp(40px,5vw,70px) clamp(24px,4vw,80px)
+           clamp(40px,5vw,70px) clamp(200px,22vw,420px);
 }
 
 .intro-wrapper{
   width:100%;
-  max-width:1500px;
-  margin:0  auto  ;
-  padding-left: 400px;
+  max-width:1600px;
+  margin:0 auto;
+  box-sizing:border-box;
 
   display:grid;
-  grid-template-columns: 1.1fr 0.8fr;
+  /* minmax(0,…) evita que el contenido fuerce el desbordamiento de la grilla */
+  grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr);
   grid-template-rows: auto auto;
 
   align-items:center;
-  gap:80px;
+  gap: clamp(20px,3vw,80px);
 }
 
 .intro-content{
   position: relative;
-    grid-column:1;
+  grid-column:1;
   grid-row:1;
+  min-width:0;
   max-width:800px;
 }
 
 .intro-content h2{
   font-family:'Playfair Display', serif;
-  font-size:44px;
+  font-size:clamp(26px,2.8vw,44px);
   line-height:1.2;
 }
 
@@ -293,13 +298,14 @@ display: flex;
   grid-column:2;
   grid-row:2;
   justify-self:end;   /* lo pega a la derecha */
-  align-self:end; 
+  align-self:end;
+  min-width:0;
   max-width:600px;
 }
 
 .intro-content-right h1{
   font-family:'Playfair Display', serif;
-  font-size:40px;
+  font-size:clamp(22px,2.4vw,40px);
   text-align: right;
   line-height:1.2;
 }
@@ -307,12 +313,12 @@ display: flex;
 
 .circle-image{
   position:absolute;
-  left: -19%;
+  /* el centro queda en el borde izquierdo => solo se ve la mitad del círculo */
+  left: calc(clamp(320px,30vw,670px) / -2);
   border-radius: 50%;
-  width:670px;
-  height:670px;
-    overflow:hidden;
-
+  width:clamp(320px,30vw,670px);
+  height:clamp(320px,30vw,670px);
+  overflow:hidden;
 }
 
 .circle-image img{
@@ -796,130 +802,6 @@ transition:.3s;
 }
 
 
-@media (min-width: 2100px) {
-
-  .intro-wrapper {
-    max-width: 1900px; /* antes 240px */
-  gap: 10px;
-  }
-
-  .circle-image {
-  width: 500px;
-  height: 500px;
-  left: -10%;
-  }
-
-  .intro-content{
-    max-width: 590px;
-  }
-
-  .intro-content h2 {
-  font-size: clamp(22px, 3vw, 36px);
-  }
-
-  .intro-content-right h1 {
-    font-size: clamp(24px, 2.5vw, 33px);
-  }
-
-  .intro-content-right {
-  align-self: center; /* en vez de end */
-}
-}
-
-@media (max-width: 1450px) {
-
-  .intro-wrapper {
-    max-width: 1100px;
-  padding-left: 280px;
-  gap: 10px;
-  }
-
-  .circle-image {
-  width: 500px;
-  height: 500px;
-  left: -19%;
-  }
-
-  .intro-content{
-    max-width: 590px;
-  }
-
-  .intro-content h2 {
-  font-size: clamp(22px, 3vw, 36px);
-  }
-
-  .intro-content-right h1 {
-    font-size: clamp(24px, 2.5vw, 33px);
-  }
-
-  .intro-content-right {
-  align-self: center; /* en vez de end */
-}
-}
-
-
-@media (max-width: 1200px) {
-
-  .intro-wrapper {
-  max-width: 700px;
-  padding-left: 310px;
-  gap: 40px;
-  }
-
-  .intro-content{
-    max-width: 330px;
-  }
-
-  .circle-image {
-  width: 500px;
-  height: 500px;
-  left: -20%;
-  }
-
-  .intro-content h2 {
-  font-size: clamp(28px, 3vw, 44px);
-  }
-
-  .intro-content-right h1 {
-    font-size: clamp(24px, 2.5vw, 40px);
-  }
-
-  .intro-content-right {
-  align-self: end; /* en vez de end */
-}
-}
-
-@media (max-width: 1025px) {
-
-  .circle-image {
-    width: 380px;
-    height: 380px;
-    left: -16%;
-  }
-
-  .intro-wrapper {
-    max-width: 700px;
-    padding-left: 250px;
-    gap: 30px;
-  }
-
-  .intro-content {
-    max-width: 330px;
-  }
-
-  .intro-content h2 {
-    font-size: clamp(22px, 2.8vw, 38px);
-  }
-
-  .intro-content-right h1 {
-    font-size: clamp(20px, 2.3vw, 34px);
-  }
-
-  .intro-content-right {
-    align-self: end;
-  }
-}
-
 @media (max-width:768px){
 
 
@@ -1092,12 +974,12 @@ font-weight: 600;
 /* ---------- INTRO SECTION ---------- */
 
 .intro-section{
-  padding-left:120px;
+  box-sizing:border-box;
+  padding:20px clamp(12px,4vw,24px) 20px clamp(110px,30vw,180px);
   background:var(--color-verdeSlightDark);
   color:white;
   min-height:150px;
-  max-height: 220px;
-  grid-template-columns:220px 1fr;
+  grid-template-columns:1fr;
   grid-template-rows:auto auto;
   position:relative;
   display:grid;
@@ -1112,6 +994,7 @@ font-weight: 600;
   max-width:500px;
   margin:0  auto  ;
   padding-left: 0;
+  box-sizing:border-box;
 
   display:grid;
   grid-template-columns: 1fr;
