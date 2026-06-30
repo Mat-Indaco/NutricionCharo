@@ -868,20 +868,25 @@ transition:.3s;
 
 @media (max-width: 1200px) {
   .intro-section{max-height: 350px;}
+
   .intro-wrapper {
-  max-width: 700px;
-  padding-left: 200px; /* antes 240px */
+  max-width: 920px;
+  padding-left: 100px; /* antes 240px */
   gap: 40px;
+  max-height: 350px;
   }
 
   .intro-content{
-    max-width: 330px;
+    max-width: 450px;
+    max-height: 350px;
+  
   }
 
   .circle-image {
   width: 500px;
   height: 500px;
   left: -27%;
+  margin:0;
   }
 
   .intro-content h2 {
@@ -889,7 +894,7 @@ transition:.3s;
   }
 
   .intro-content-right h1 {
-    font-size: clamp(24px, 2.5vw, 40px);
+    font-size: clamp(20px, 2.1vw, 30px);
   }
 
   .intro-content-right {
