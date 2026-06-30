@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrición Salud | Plan Personalizado</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="producto.css">
+<link rel="stylesheet" href="sobre-miStyle.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+<nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="./images/logo1.png" alt="Nutricionista">
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html"  class="active">INICIO</a></li>
+          <li><a href="sobre-mi.html" >SOBRE MI</a></li>
+          <li><a href="producto.html" >TIENDA</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  </nav>
+
+  
+<header id="inicio" class="hero hero-home">
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo1.png" alt="Nutricionista">
+    </div>
+  </div>
+</header>
+
+<section class="about-section">
+
+  <div class="about-container">
+
+    <div class="about-text">
+      <p class="about-top">
+        SI ESTÁS BUSCANDO CAMBIAR TUS HÁBITOS, ESTÁS EN EL LUGAR CORRECTO.
+      </p>
+
+      <h2>Alimentacion simplificada,</h2>
+
+      <p class="about-sub">
+      Para una nutrición verdaderamente posible.      
+    </p>
+
+      <p class="about-description">
+        Soy Charo, trabajo para que puedas construir una relación más 
+        tranquila y real con la comida, sin extremos y sin exigencias imposibles.
+      </p>
+
+      <a href="sobre-mi.html" class="about-link">Sobre Mi →</a>
+    </div>
+
+    <div class="sobre-img">
+      <div class="foto-oval">
+        <img src="images/charo.png">
+      </div>
+    <div class="logo-wrapper">
+      <img src="images/logo-solo.png" class="logo-deco">
+    </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+<section class="intro-section fade-up">
+
+  <div class="circle-image">
+    <img src="images/bowl2.png" alt="comida saludable">
+  </div>
+  <div class="intro-wrapper">
+  <div class="intro-content">
+    <h2>
+      Un espacio para mejorar tu alimentación de manera equilibrada.
+    </h2>
+  </div>
+  <div class="intro-content-right">
+
+    <h1>
+    Nutrición basada en evidencia, hábitos sostenibles para tu bienestar.    </h1>
+
+  </div>
+  </div>
+
+</section>
+
+<section class="parallax">
+  <div class="parallax-bg"></div>
+</section>
+
+
+<section class="recetarios fade-up">
+
+  <div class="recetarios-header">
+    <h2>Encontrá todo para organizar tu alimentación</h2>
+    <p>Basado en evidencia y creado desde la experiencia profesional.</p>
+  </div>
+
+  <div class="recetarios-grid">
+
+    <!-- CARD 1 -->
+    <a href="producto.html" class="receta-card verde">
+
+      <div class="receta-img">
+        <img src="images/receta-test.png" alt="Recetarios Semanales">
+      </div>
+
+      <div class="receta-info">
+        <h1>Recetarios Semanales</h1>
+        <p>
+          Opciones equilibradas y prácticas para desayunos,
+           almuerzos, meriendas y cenas. Ideal para organizar tu semana,
+            comer variado y simplificar la planificación sin complicaciones. 
+            Comer variado y solucionar la alimentación de tu día a día.
+        </p>
+
+        <div class="features">
+            
+            <div class="features-1">
+              <svg class="icon">
+                <use href="./icons.svg#icon-chef"></use>
+              </svg>
+              <div class="feature-text">
+               <span class="feature-number">35</span>
+               <span class="feature-label">Recetas</span>
+              </div>
+            </div>
+            <div class="features-1">
+              <svg class="icon">
+                <use href="./icons.svg#leaf"></use>
+              </svg>
+              <div class="feature-text">
+               <span class="feature-number">Enfoque alimenticio</span>
+               <span class="feature-label">Alimentacion saludable</span>
+              </div>
+            </div>
+            
+            
+          </div>
+
+      </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="producto.html" class="receta-card rosa">
+
+      <div class="receta-img">
+        <img src="images/receta-test-inf.png" alt="Recetario Infantil">
+      </div>
+
+      <div class="receta-info">
+        <h1>Recetario Infantil</h1>
+
+        <p>
+          Recetario para colorear, llevar las infancias a la cocina y lograr la incorporación de vegetales sin peleas en la mesa. Opciones 
+          fáciles y adaptadas para que los más chicos logren darle color a su alimentación. 🥦
+        </p>
+
+        <div class="features">
+
+          <div class="features-1">
+              <svg class="icon">
+                <use href="icons.svg#icon-carrot"></use>
+              </svg>
+              <div class="feature-text">
+               <span class="feature-number">12</span>
+               <span class="feature-label">Recetas</span>
+              </div>
+            </div>
+           <div class="features-1">
+              <svg class="icon">
+                <use href="icons.svg#leaf"></use>
+              </svg>
+  
+  <div class="feature-text">
+               <span class="feature-number">Enfoque alimenticio</span>
+               <span class="feature-label">Alimentacion saludable</span>
+  </div>
+  
+</div>
+
+      </div>
+    </div>
+
+  </a>
+
+</section>
+
+<section class="parallax">
+  <div class="parallax-bg"></div>
+</section>
+
+<section class="tienda fade-up">
+
+  <div class="tienda-img">
+    <img src="images/brownies.png" alt="Brownies saludables">
+  </div>
+
+  <div class="tienda-text">
+    <h2>Mi tienda</h2>
+
+    <p>
+      Inspiración, herramientas útiles y recursos prácticos para planificar tus comidas de forma simple y creativa.
+       Todo el material está basado en evidencia y desarrollado desde mi experiencia profesional.
+    </p>
+
+    <a href="producto.html" class="about-link">Ver Tienda →</a>
+  </div>
+
+</section>
+
+<section class="testimonio-grande fade-up">
+
+  <div class="comillas">“</div>
+
+  <p class="testimonio-texto">
+    El arte de no estar listo, pero aún así hacerlo, te va a llevar más lejos de lo que pensás.</p>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-logo">
+<img src="images/logo.png" alt="Charo Nutrición">
+</div>
+
+<div class="footer-right">
+
+<div class="footer-social">
+<a href="#"><img src="images/ig.png"></a>
+<a href="#"><img src="images/fb.png"></a>
+<a href="#"><img src="images/mail.png"></a>
+</div>
+
+<p class="footer-copy">
+ 2025 Charo Olariaga — Nutrición
+</p>
+
+</div>
+
+</div>
+
+</footer>
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
